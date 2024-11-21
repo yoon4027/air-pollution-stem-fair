@@ -1,0 +1,13 @@
+[package]
+name = "scripts"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.5.20", features = ["derive"] }
+tokio = { version = "1.40.0", features = ["net", "rt", "rt-multi-thread", "macros"] }
+common = { path = "../common" }
+
+[[bin]]
+name = "create-device"
+path = "src/bin/create_device.rs"
